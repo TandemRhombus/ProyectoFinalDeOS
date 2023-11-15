@@ -7,6 +7,8 @@ class Statistics {
 public:
     void calculate();
     // Métodos relevantes aquí
+    void calculateStatistics(); // Calcula las estadísticas
+    void displayStatistics(); // Muestra las estadísticas
 };
 
 #endif
