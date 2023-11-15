@@ -5,8 +5,11 @@
 
 class MemoryManager {
     // Implementación del Buddy System
+private:
+    static const int MIN_SPLIT_SIZE = 32 * 1024; // 32 KB
+    int memorySize; // Tamaño de la memoria en bytes
 public:
-    MemoryManager(int size); // Constructor
+    MemoryManager(int sizeInMB); // Constructor
     // Métodos relevantes aquí
     void allocate(int size); // Asigna memoria
     void deallocate(int size); // Libera memoria
