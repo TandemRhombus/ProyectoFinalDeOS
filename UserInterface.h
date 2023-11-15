@@ -1,8 +1,10 @@
-//
-// Created by Joker on 14/11/2023.
-//
-
 #ifndef PROYECTOFINALDEOS_USERINTERFACE_H
 #define PROYECTOFINALDEOS_USERINTERFACE_H
 
-#endif //PROYECTOFINALDEOS_USERINTERFACE_H
+class UserInterface {
+public:
+    void display();
+    // Métodos relevantes aquí
+};
+
+#endif

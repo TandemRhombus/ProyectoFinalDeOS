@@ -1,8 +1,12 @@
-//
-// Created by Joker on 14/11/2023.
-//
-
 #ifndef PROYECTOFINALDEOS_STATISTICS_H
 #define PROYECTOFINALDEOS_STATISTICS_H
 
-#endif //PROYECTOFINALDEOS_STATISTICS_H
+// Statistics.h
+class Statistics {
+    // Atributos para estadísticas
+public:
+    void calculate();
+    // Métodos relevantes aquí
+};
+
+#endif

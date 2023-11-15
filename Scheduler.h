@@ -1,8 +1,11 @@
-//
-// Created by Joker on 14/11/2023.
-//
-
 #ifndef PROYECTOFINALDEOS_SCHEDULER_H
 #define PROYECTOFINALDEOS_SCHEDULER_H
 
-#endif //PROYECTOFINALDEOS_SCHEDULER_H
+class Scheduler {
+    // Implementación de Round Robin
+public:
+    Scheduler(int quantum);
+    // Métodos relevantes aquí
+};
+
+#endif
