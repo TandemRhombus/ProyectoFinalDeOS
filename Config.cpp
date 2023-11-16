@@ -1,23 +1,23 @@
 #include "Config.h"
 
 int Config::getProcessQuantum() {
-    return processQuantum;
+    return processQuantum; // Cuánto de procesamiento asignado a cada proceso
 }
 
 int Config::getMaxProcessMemorySize() {
-    return maxProcessMemorySize;
+    return maxProcessMemorySize; // Tamaño máximo de memoria de proceso
 }
 
 int Config::getMaxSystemQuantum() {
-    return maxSystemQuantum;
+    return maxSystemQuantum; // Tamaño máximo del cuanto de procesamiento del sistema por proceso
 }
 
 int Config::getMemorySize() {
-    return memorySize;
+    return memorySize; // Tamaño de la memoria (en MB)
 }
 
 int Config::getMinSplitSize() {
-    return minSplitSize;
+    return minSplitSize; // Tamaño mínimo de split (en KB)
 }
 
 void Config::setProcessQuantum(int quantum) {

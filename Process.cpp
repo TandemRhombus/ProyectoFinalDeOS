@@ -17,12 +17,12 @@ int Process::getQuantum() const {
 }
 
 int Process::getRemainingQuantum() const {
-    return remainingQuantum;
+    return remainingQuantum; // Obtener el quantum restante del proceso actual (para Round Robin)
 }
 
 // Setter
 void Process::setRemainingQuantum(int remainingQuantum) {
-    this->remainingQuantum = remainingQuantum;
+    this->remainingQuantum = remainingQuantum; // Actualizar el quantum restante del proceso actual (para Round Robin)
 }
 
 // Setter
@@ -44,7 +44,7 @@ void Process::setQuantum(int quantum) {
 void Process::execute() {
     if (remainingQuantum > 0) {
         remainingQuantum--;
-        cout << "Proceso " << id << " en ejecución. Quantum restante: " << remainingQuantum << endl;
+        cout << "Proceso " << id << " en ejecucion. Quantum restante: " << remainingQuantum << endl; // Mostrar mensaje de ejecución (esto es de prueba)
     }
 }
 

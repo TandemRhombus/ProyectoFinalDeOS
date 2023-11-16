@@ -36,7 +36,7 @@ void showConfigurationMenu(Config& config) {
                 cin >> value;
                 config.maxSystemQuantum = value;
                 break;
-            case 4:
+            case 4: //Esto posiblemente se borre
                 // Validar que el valor ingresado sea 1 o 4 o 8
                 while(value != 1 && value != 4 && value != 8) {
                     cout << "Ingrese el Tamano de la Memoria (en MB de 1, 4 o 8): ";
@@ -48,7 +48,7 @@ void showConfigurationMenu(Config& config) {
                     config.memorySize = value;
                 }
                 break;
-            case 5:
+            case 5: //Esto posiblemente se borre
                 while(value < 32) {
                     cout << "Ingrese el Tamano Minimo de Split (en KB y mayor o igual a 32): ";
                     cin >> value;
@@ -70,14 +70,14 @@ void showConfigurationMenu(Config& config) {
 
 
 int main() {
-    Config config;
-    Process process;
-    BuddySystem buddySystem(config.getMemorySize(), config.getMinSplitSize());
-    RoundRobin roundRobin(config.getMaxSystemQuantum());
-    showConfigurationMenu(config);
+    Config config; // Configuración inicial
+    showConfigurationMenu(config); // Muestra el menú de configuración
+    Process process; // Proceso
+    BuddySystem buddySystem(config.getMemorySize(), config.getMinSplitSize()); // Tamaño de la memoria (en MB), Tamaño mínimo de split (en KB) (Esto posiblemente se borre)
+    RoundRobin roundRobin(config.getMaxSystemQuantum()); // Cuánto de procesamiento asignado al sistema por proceso
     //Asignaciones de configuraciónes
-    process.setQuantum(config.getProcessQuantum());
-    buddySystem.setMaxSize(config.getMaxProcessMemorySize());
+    process.setQuantum(config.getProcessQuantum()); // Cuánto de procesamiento asignado a cada proceso
+    buddySystem.setMaxSize(config.getMaxProcessMemorySize()); // Tamaño máximo de memoria de proceso
 
     return 0;
 }
