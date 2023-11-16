@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/emili/Codigos de logica de programacion (C)/ProyectoFinalDeOS/BuddySystem.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/BuddySystem.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/BuddySystem.cpp.obj.d"
-  "C:/Users/emili/Codigos de logica de programacion (C)/ProyectoFinalDeOS/Config.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj.d"
-  "C:/Users/emili/Codigos de logica de programacion (C)/ProyectoFinalDeOS/Process.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj.d"
-  "C:/Users/emili/Codigos de logica de programacion (C)/ProyectoFinalDeOS/RoundRobin.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.obj.d"
-  "C:/Users/emili/Codigos de logica de programacion (C)/ProyectoFinalDeOS/main.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj.d"
+  "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/BuddySystem.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/BuddySystem.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/BuddySystem.cpp.obj.d"
+  "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Config.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj.d"
+  "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Process.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj.d"
+  "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/RoundRobin.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.obj.d"
+  "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/main.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

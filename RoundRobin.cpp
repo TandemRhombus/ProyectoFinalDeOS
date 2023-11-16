@@ -4,7 +4,7 @@
 using namespace std;
 
 // Constructor
-RoundRobin::RoundRobin(int quantum) : quantum(quantum) {} // Constructor
+RoundRobin::RoundRobin(int quantum) : quantum(quantum) {} // Constructor s
 
 // Añadir un proceso a la cola
 void RoundRobin::addProcess(const Process& process) {
