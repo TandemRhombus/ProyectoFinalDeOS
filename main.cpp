@@ -1,8 +1,6 @@
 #include <iostream>
-#include "Scheduler.h"
-#include "MemoryManager.h"
-#include "Process.h"
 #include "Config.h"
+#include "Process.h"
 
 using namespace std;
 
@@ -10,11 +8,11 @@ void showConfigurationMenu(Config& config) {
     int choice = 0;
     while (choice != 6) {
         cout << "\n=== Menu de Configuracion ===\n";
-        cout << "1. Establecer Cuanto de Procesamiento\n";
+        cout << "1. Establecer Cuanto de Procesamiento (De cada proceso)\n";
         cout << "2. Establecer Tamano Maximo de Memoria de Proceso\n";
         cout << "3. Establecer Tamano Maximo del Cuanto del Sistema\n";
         cout << "4. Establecer Tamano de la Memoria\n";
-        cout << "5. Establecer Tamano Minimo de Split\n";
+        cout << "5. Establecer Tamano del SPLIT\n";
         cout << "6. Salir\n";
         cout << "Seleccione una opcion: ";
         cin >> choice;
@@ -71,7 +69,10 @@ void showConfigurationMenu(Config& config) {
 
 int main() {
     Config config;
+    Process process;
     showConfigurationMenu(config);
+    //Asignaciones de configuraciónes
+    process.setQuantum(config.getProcessQuantum());
 
     return 0;
 }

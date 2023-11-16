@@ -9,7 +9,7 @@ public:
     int memorySize; // Tamaño de la memoria (en MB)
     int minSplitSize; // Tamaño mínimo de split (en KB)
 
-    Config() : processQuantum(0), maxProcessMemorySize(0), maxSystemQuantum(0), memorySize(1), minSplitSize(32) {}
+    Config() : processQuantum(0), maxProcessMemorySize(0), maxSystemQuantum(0), memorySize(8), minSplitSize(32) {}
 
     // Métodos para establecer y obtener configuraciones
     // ...

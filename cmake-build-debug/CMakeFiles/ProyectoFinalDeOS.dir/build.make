@@ -82,80 +82,10 @@ CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.s"
 	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\main.cpp" -o CMakeFiles\ProyectoFinalDeOS.dir\main.cpp.s
 
-CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/flags.make
-CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj: C:/Users/PC\ LITLE\ OWL/CLionProjects/ProyectoFinalDeOS/Process.cpp
-CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj"
-	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj -MF CMakeFiles\ProyectoFinalDeOS.dir\Process.cpp.obj.d -o CMakeFiles\ProyectoFinalDeOS.dir\Process.cpp.obj -c "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Process.cpp"
-
-CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.i"
-	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Process.cpp" > CMakeFiles\ProyectoFinalDeOS.dir\Process.cpp.i
-
-CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.s"
-	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Process.cpp" -o CMakeFiles\ProyectoFinalDeOS.dir\Process.cpp.s
-
-CMakeFiles/ProyectoFinalDeOS.dir/MemoryManager.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/flags.make
-CMakeFiles/ProyectoFinalDeOS.dir/MemoryManager.cpp.obj: C:/Users/PC\ LITLE\ OWL/CLionProjects/ProyectoFinalDeOS/MemoryManager.cpp
-CMakeFiles/ProyectoFinalDeOS.dir/MemoryManager.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ProyectoFinalDeOS.dir/MemoryManager.cpp.obj"
-	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoFinalDeOS.dir/MemoryManager.cpp.obj -MF CMakeFiles\ProyectoFinalDeOS.dir\MemoryManager.cpp.obj.d -o CMakeFiles\ProyectoFinalDeOS.dir\MemoryManager.cpp.obj -c "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\MemoryManager.cpp"
-
-CMakeFiles/ProyectoFinalDeOS.dir/MemoryManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProyectoFinalDeOS.dir/MemoryManager.cpp.i"
-	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\MemoryManager.cpp" > CMakeFiles\ProyectoFinalDeOS.dir\MemoryManager.cpp.i
-
-CMakeFiles/ProyectoFinalDeOS.dir/MemoryManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProyectoFinalDeOS.dir/MemoryManager.cpp.s"
-	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\MemoryManager.cpp" -o CMakeFiles\ProyectoFinalDeOS.dir\MemoryManager.cpp.s
-
-CMakeFiles/ProyectoFinalDeOS.dir/Scheduler.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/flags.make
-CMakeFiles/ProyectoFinalDeOS.dir/Scheduler.cpp.obj: C:/Users/PC\ LITLE\ OWL/CLionProjects/ProyectoFinalDeOS/Scheduler.cpp
-CMakeFiles/ProyectoFinalDeOS.dir/Scheduler.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ProyectoFinalDeOS.dir/Scheduler.cpp.obj"
-	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoFinalDeOS.dir/Scheduler.cpp.obj -MF CMakeFiles\ProyectoFinalDeOS.dir\Scheduler.cpp.obj.d -o CMakeFiles\ProyectoFinalDeOS.dir\Scheduler.cpp.obj -c "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Scheduler.cpp"
-
-CMakeFiles/ProyectoFinalDeOS.dir/Scheduler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProyectoFinalDeOS.dir/Scheduler.cpp.i"
-	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Scheduler.cpp" > CMakeFiles\ProyectoFinalDeOS.dir\Scheduler.cpp.i
-
-CMakeFiles/ProyectoFinalDeOS.dir/Scheduler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProyectoFinalDeOS.dir/Scheduler.cpp.s"
-	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Scheduler.cpp" -o CMakeFiles\ProyectoFinalDeOS.dir\Scheduler.cpp.s
-
-CMakeFiles/ProyectoFinalDeOS.dir/UserInterface.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/flags.make
-CMakeFiles/ProyectoFinalDeOS.dir/UserInterface.cpp.obj: C:/Users/PC\ LITLE\ OWL/CLionProjects/ProyectoFinalDeOS/UserInterface.cpp
-CMakeFiles/ProyectoFinalDeOS.dir/UserInterface.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ProyectoFinalDeOS.dir/UserInterface.cpp.obj"
-	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoFinalDeOS.dir/UserInterface.cpp.obj -MF CMakeFiles\ProyectoFinalDeOS.dir\UserInterface.cpp.obj.d -o CMakeFiles\ProyectoFinalDeOS.dir\UserInterface.cpp.obj -c "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\UserInterface.cpp"
-
-CMakeFiles/ProyectoFinalDeOS.dir/UserInterface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProyectoFinalDeOS.dir/UserInterface.cpp.i"
-	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\UserInterface.cpp" > CMakeFiles\ProyectoFinalDeOS.dir\UserInterface.cpp.i
-
-CMakeFiles/ProyectoFinalDeOS.dir/UserInterface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProyectoFinalDeOS.dir/UserInterface.cpp.s"
-	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\UserInterface.cpp" -o CMakeFiles\ProyectoFinalDeOS.dir\UserInterface.cpp.s
-
-CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/flags.make
-CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj: C:/Users/PC\ LITLE\ OWL/CLionProjects/ProyectoFinalDeOS/Statistics.cpp
-CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj"
-	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj -MF CMakeFiles\ProyectoFinalDeOS.dir\Statistics.cpp.obj.d -o CMakeFiles\ProyectoFinalDeOS.dir\Statistics.cpp.obj -c "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Statistics.cpp"
-
-CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.i"
-	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Statistics.cpp" > CMakeFiles\ProyectoFinalDeOS.dir\Statistics.cpp.i
-
-CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.s"
-	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Statistics.cpp" -o CMakeFiles\ProyectoFinalDeOS.dir\Statistics.cpp.s
-
 CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/flags.make
 CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj: C:/Users/PC\ LITLE\ OWL/CLionProjects/ProyectoFinalDeOS/Config.cpp
 CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj"
 	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj -MF CMakeFiles\ProyectoFinalDeOS.dir\Config.cpp.obj.d -o CMakeFiles\ProyectoFinalDeOS.dir\Config.cpp.obj -c "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Config.cpp"
 
 CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.i: cmake_force
@@ -166,31 +96,37 @@ CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.s"
 	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Config.cpp" -o CMakeFiles\ProyectoFinalDeOS.dir\Config.cpp.s
 
+CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/flags.make
+CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj: C:/Users/PC\ LITLE\ OWL/CLionProjects/ProyectoFinalDeOS/Process.cpp
+CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj"
+	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj -MF CMakeFiles\ProyectoFinalDeOS.dir\Process.cpp.obj.d -o CMakeFiles\ProyectoFinalDeOS.dir\Process.cpp.obj -c "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Process.cpp"
+
+CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.i"
+	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Process.cpp" > CMakeFiles\ProyectoFinalDeOS.dir\Process.cpp.i
+
+CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.s"
+	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Process.cpp" -o CMakeFiles\ProyectoFinalDeOS.dir\Process.cpp.s
+
 # Object files for target ProyectoFinalDeOS
 ProyectoFinalDeOS_OBJECTS = \
 "CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj" \
-"CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj" \
-"CMakeFiles/ProyectoFinalDeOS.dir/MemoryManager.cpp.obj" \
-"CMakeFiles/ProyectoFinalDeOS.dir/Scheduler.cpp.obj" \
-"CMakeFiles/ProyectoFinalDeOS.dir/UserInterface.cpp.obj" \
-"CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj" \
-"CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj"
+"CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj" \
+"CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj"
 
 # External object files for target ProyectoFinalDeOS
 ProyectoFinalDeOS_EXTERNAL_OBJECTS =
 
 ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj
-ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj
-ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/MemoryManager.cpp.obj
-ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/Scheduler.cpp.obj
-ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/UserInterface.cpp.obj
-ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj
 ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj
+ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj
 ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/build.make
 ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/linkLibs.rsp
 ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/objects1.rsp
 ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ProyectoFinalDeOS.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ProyectoFinalDeOS.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ProyectoFinalDeOS.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

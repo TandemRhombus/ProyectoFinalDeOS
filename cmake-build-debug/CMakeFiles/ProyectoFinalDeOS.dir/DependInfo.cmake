@@ -9,11 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Config.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj.d"
-  "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/MemoryManager.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/MemoryManager.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/MemoryManager.cpp.obj.d"
   "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Process.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj.d"
-  "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Scheduler.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/Scheduler.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/Scheduler.cpp.obj.d"
-  "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Statistics.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj.d"
-  "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/UserInterface.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/UserInterface.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/UserInterface.cpp.obj.d"
   "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/main.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj.d"
   )
 

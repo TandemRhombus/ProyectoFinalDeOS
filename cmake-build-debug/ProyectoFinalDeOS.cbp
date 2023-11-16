@@ -90,34 +90,10 @@
 		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Config.h">
 			<Option target="ProyectoFinalDeOS"/>
 		</Unit>
-		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/MemoryManager.cpp">
-			<Option target="ProyectoFinalDeOS"/>
-		</Unit>
-		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/MemoryManager.h">
-			<Option target="ProyectoFinalDeOS"/>
-		</Unit>
 		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Process.cpp">
 			<Option target="ProyectoFinalDeOS"/>
 		</Unit>
 		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Process.h">
-			<Option target="ProyectoFinalDeOS"/>
-		</Unit>
-		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Scheduler.cpp">
-			<Option target="ProyectoFinalDeOS"/>
-		</Unit>
-		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Scheduler.h">
-			<Option target="ProyectoFinalDeOS"/>
-		</Unit>
-		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Statistics.cpp">
-			<Option target="ProyectoFinalDeOS"/>
-		</Unit>
-		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Statistics.h">
-			<Option target="ProyectoFinalDeOS"/>
-		</Unit>
-		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/UserInterface.cpp">
-			<Option target="ProyectoFinalDeOS"/>
-		</Unit>
-		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/UserInterface.h">
 			<Option target="ProyectoFinalDeOS"/>
 		</Unit>
 		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/main.cpp">

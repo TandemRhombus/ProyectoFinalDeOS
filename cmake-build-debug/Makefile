@@ -152,30 +152,6 @@ Config.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.s
 .PHONY : Config.cpp.s
 
-MemoryManager.obj: MemoryManager.cpp.obj
-.PHONY : MemoryManager.obj
-
-# target to build an object file
-MemoryManager.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/MemoryManager.cpp.obj
-.PHONY : MemoryManager.cpp.obj
-
-MemoryManager.i: MemoryManager.cpp.i
-.PHONY : MemoryManager.i
-
-# target to preprocess a source file
-MemoryManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/MemoryManager.cpp.i
-.PHONY : MemoryManager.cpp.i
-
-MemoryManager.s: MemoryManager.cpp.s
-.PHONY : MemoryManager.s
-
-# target to generate assembly for a file
-MemoryManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/MemoryManager.cpp.s
-.PHONY : MemoryManager.cpp.s
-
 Process.obj: Process.cpp.obj
 .PHONY : Process.obj
 
@@ -199,78 +175,6 @@ Process.s: Process.cpp.s
 Process.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.s
 .PHONY : Process.cpp.s
-
-Scheduler.obj: Scheduler.cpp.obj
-.PHONY : Scheduler.obj
-
-# target to build an object file
-Scheduler.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/Scheduler.cpp.obj
-.PHONY : Scheduler.cpp.obj
-
-Scheduler.i: Scheduler.cpp.i
-.PHONY : Scheduler.i
-
-# target to preprocess a source file
-Scheduler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/Scheduler.cpp.i
-.PHONY : Scheduler.cpp.i
-
-Scheduler.s: Scheduler.cpp.s
-.PHONY : Scheduler.s
-
-# target to generate assembly for a file
-Scheduler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/Scheduler.cpp.s
-.PHONY : Scheduler.cpp.s
-
-Statistics.obj: Statistics.cpp.obj
-.PHONY : Statistics.obj
-
-# target to build an object file
-Statistics.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj
-.PHONY : Statistics.cpp.obj
-
-Statistics.i: Statistics.cpp.i
-.PHONY : Statistics.i
-
-# target to preprocess a source file
-Statistics.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.i
-.PHONY : Statistics.cpp.i
-
-Statistics.s: Statistics.cpp.s
-.PHONY : Statistics.s
-
-# target to generate assembly for a file
-Statistics.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.s
-.PHONY : Statistics.cpp.s
-
-UserInterface.obj: UserInterface.cpp.obj
-.PHONY : UserInterface.obj
-
-# target to build an object file
-UserInterface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/UserInterface.cpp.obj
-.PHONY : UserInterface.cpp.obj
-
-UserInterface.i: UserInterface.cpp.i
-.PHONY : UserInterface.i
-
-# target to preprocess a source file
-UserInterface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/UserInterface.cpp.i
-.PHONY : UserInterface.cpp.i
-
-UserInterface.s: UserInterface.cpp.s
-.PHONY : UserInterface.s
-
-# target to generate assembly for a file
-UserInterface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/UserInterface.cpp.s
-.PHONY : UserInterface.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -308,21 +212,9 @@ help:
 	@echo ... Config.obj
 	@echo ... Config.i
 	@echo ... Config.s
-	@echo ... MemoryManager.obj
-	@echo ... MemoryManager.i
-	@echo ... MemoryManager.s
 	@echo ... Process.obj
 	@echo ... Process.i
 	@echo ... Process.s
-	@echo ... Scheduler.obj
-	@echo ... Scheduler.i
-	@echo ... Scheduler.s
-	@echo ... Statistics.obj
-	@echo ... Statistics.i
-	@echo ... Statistics.s
-	@echo ... UserInterface.obj
-	@echo ... UserInterface.i
-	@echo ... UserInterface.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
