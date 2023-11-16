@@ -6,8 +6,6 @@
 
 using namespace std;
 
-me llamo juan
-
 void showConfigurationMenu(Config& config) {
     int choice = 0;
     while (choice != 6) {
