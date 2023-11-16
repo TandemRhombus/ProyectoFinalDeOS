@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ProyectoFinalDeOS::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ProyectoFinalDeOS-Debug-d21f13eb2d9f8a2109ff.json",
+					"jsonFile" : "target-ProyectoFinalDeOS-Debug-4447b9119fa2fecb7d47.json",
 					"name" : "ProyectoFinalDeOS",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/ProyectoFinalDeOS/cmake-build-debug",
-		"source" : "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/ProyectoFinalDeOS"
+		"build" : "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/cmake-build-debug",
+		"source" : "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS"
 	},
 	"version" : 
 	{

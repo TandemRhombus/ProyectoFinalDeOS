@@ -49,6 +49,21 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
+			"path" : "C:/Users/PC LITLE OWL/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeFindCodeBlocks.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/PC LITLE OWL/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/PC LITLE OWL/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/ProcessorCount.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
 			"path" : "C:/Users/PC LITLE OWL/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake"
 		},
 		{
@@ -149,8 +164,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/ProyectoFinalDeOS/cmake-build-debug",
-		"source" : "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/ProyectoFinalDeOS"
+		"build" : "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/cmake-build-debug",
+		"source" : "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS"
 	},
 	"version" : 
 	{
