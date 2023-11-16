@@ -128,6 +128,30 @@ ProyectoFinalDeOS/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/build
 .PHONY : ProyectoFinalDeOS/fast
 
+BuddySystem.obj: BuddySystem.cpp.obj
+.PHONY : BuddySystem.obj
+
+# target to build an object file
+BuddySystem.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/BuddySystem.cpp.obj
+.PHONY : BuddySystem.cpp.obj
+
+BuddySystem.i: BuddySystem.cpp.i
+.PHONY : BuddySystem.i
+
+# target to preprocess a source file
+BuddySystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/BuddySystem.cpp.i
+.PHONY : BuddySystem.cpp.i
+
+BuddySystem.s: BuddySystem.cpp.s
+.PHONY : BuddySystem.s
+
+# target to generate assembly for a file
+BuddySystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/BuddySystem.cpp.s
+.PHONY : BuddySystem.cpp.s
+
 Config.obj: Config.cpp.obj
 .PHONY : Config.obj
 
@@ -176,6 +200,30 @@ Process.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.s
 .PHONY : Process.cpp.s
 
+RoundRobin.obj: RoundRobin.cpp.obj
+.PHONY : RoundRobin.obj
+
+# target to build an object file
+RoundRobin.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.obj
+.PHONY : RoundRobin.cpp.obj
+
+RoundRobin.i: RoundRobin.cpp.i
+.PHONY : RoundRobin.i
+
+# target to preprocess a source file
+RoundRobin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.i
+.PHONY : RoundRobin.cpp.i
+
+RoundRobin.s: RoundRobin.cpp.s
+.PHONY : RoundRobin.s
+
+# target to generate assembly for a file
+RoundRobin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.s
+.PHONY : RoundRobin.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -209,12 +257,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ProyectoFinalDeOS
+	@echo ... BuddySystem.obj
+	@echo ... BuddySystem.i
+	@echo ... BuddySystem.s
 	@echo ... Config.obj
 	@echo ... Config.i
 	@echo ... Config.s
 	@echo ... Process.obj
 	@echo ... Process.i
 	@echo ... Process.s
+	@echo ... RoundRobin.obj
+	@echo ... RoundRobin.i
+	@echo ... RoundRobin.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

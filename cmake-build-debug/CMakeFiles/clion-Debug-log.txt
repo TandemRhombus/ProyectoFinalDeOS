@@ -1,4 +1,4 @@
 "C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS" -B "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug"
--- Configuring done (0.1s)
+-- Configuring done (0.3s)
 -- Generating done (0.0s)
 -- Build files have been written to: C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/cmake-build-debug

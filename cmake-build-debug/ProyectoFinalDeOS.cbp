@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/BuddySystem.cpp">
+			<Option target="ProyectoFinalDeOS"/>
+		</Unit>
+		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/BuddySystem.h">
+			<Option target="ProyectoFinalDeOS"/>
+		</Unit>
 		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Config.cpp">
 			<Option target="ProyectoFinalDeOS"/>
 		</Unit>
@@ -94,6 +100,12 @@
 			<Option target="ProyectoFinalDeOS"/>
 		</Unit>
 		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Process.h">
+			<Option target="ProyectoFinalDeOS"/>
+		</Unit>
+		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/RoundRobin.cpp">
+			<Option target="ProyectoFinalDeOS"/>
+		</Unit>
+		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/RoundRobin.h">
 			<Option target="ProyectoFinalDeOS"/>
 		</Unit>
 		<Unit filename="C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/main.cpp">

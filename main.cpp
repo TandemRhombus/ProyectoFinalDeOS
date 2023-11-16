@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Config.h"
 #include "Process.h"
+#include "BuddySystem.h"
+#include "RoundRobin.h"
 
 using namespace std;
 
@@ -70,9 +72,12 @@ void showConfigurationMenu(Config& config) {
 int main() {
     Config config;
     Process process;
+    BuddySystem buddySystem(config.getMemorySize(), config.getMinSplitSize());
+    RoundRobin roundRobin(config.getMaxSystemQuantum());
     showConfigurationMenu(config);
     //Asignaciones de configuraciónes
     process.setQuantum(config.getProcessQuantum());
+    buddySystem.setMaxSize(config.getMaxProcessMemorySize());
 
     return 0;
 }

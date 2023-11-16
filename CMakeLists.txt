@@ -7,4 +7,8 @@ add_executable(ProyectoFinalDeOS main.cpp
         Config.cpp
         Config.h
         Process.cpp
-        Process.h)
+        Process.h
+        BuddySystem.cpp
+        BuddySystem.h
+        RoundRobin.cpp
+        RoundRobin.h)

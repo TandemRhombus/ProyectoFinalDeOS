@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ProyectoFinalDeOS.dir/BuddySystem.cpp.obj"
+  "CMakeFiles/ProyectoFinalDeOS.dir/BuddySystem.cpp.obj.d"
   "CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj"
   "CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj.d"
   "CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj"
   "CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj.d"
+  "CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.obj"
+  "CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.obj.d"
   "CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj"
   "CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj.d"
   "ProyectoFinalDeOS.exe"

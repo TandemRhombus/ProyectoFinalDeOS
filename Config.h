@@ -13,11 +13,11 @@ public:
 
     // Métodos para establecer y obtener configuraciones
     // ...
-    int getProcessQuantum();
-    int getMaxProcessMemorySize();
-    int getMaxSystemQuantum();
-    int getMemorySize();
-    int getMinSplitSize();
+    int getProcessQuantum(); // Cuánto de procesamiento asignado a cada proceso
+    int getMaxProcessMemorySize(); // Tamaño máximo de memoria de proceso
+    int getMaxSystemQuantum(); // Tamaño máximo del cuanto de procesamiento del sistema por proceso
+    int getMemorySize(); // Tamaño de la memoria (en MB)
+    int getMinSplitSize(); // Tamaño mínimo de split (en KB)
     void setProcessQuantum(int quantum);
     void setMaxProcessMemorySize(int size);
     void setMaxSystemQuantum(int quantum);
