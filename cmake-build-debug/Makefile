@@ -224,6 +224,54 @@ RoundRobin.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.s
 .PHONY : RoundRobin.cpp.s
 
+Simulation.obj: Simulation.cpp.obj
+.PHONY : Simulation.obj
+
+# target to build an object file
+Simulation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/Simulation.cpp.obj
+.PHONY : Simulation.cpp.obj
+
+Simulation.i: Simulation.cpp.i
+.PHONY : Simulation.i
+
+# target to preprocess a source file
+Simulation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/Simulation.cpp.i
+.PHONY : Simulation.cpp.i
+
+Simulation.s: Simulation.cpp.s
+.PHONY : Simulation.s
+
+# target to generate assembly for a file
+Simulation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/Simulation.cpp.s
+.PHONY : Simulation.cpp.s
+
+Statistics.obj: Statistics.cpp.obj
+.PHONY : Statistics.obj
+
+# target to build an object file
+Statistics.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj
+.PHONY : Statistics.cpp.obj
+
+Statistics.i: Statistics.cpp.i
+.PHONY : Statistics.i
+
+# target to preprocess a source file
+Statistics.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.i
+.PHONY : Statistics.cpp.i
+
+Statistics.s: Statistics.cpp.s
+.PHONY : Statistics.s
+
+# target to generate assembly for a file
+Statistics.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoFinalDeOS.dir\build.make CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.s
+.PHONY : Statistics.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -269,6 +317,12 @@ help:
 	@echo ... RoundRobin.obj
 	@echo ... RoundRobin.i
 	@echo ... RoundRobin.s
+	@echo ... Simulation.obj
+	@echo ... Simulation.i
+	@echo ... Simulation.s
+	@echo ... Statistics.obj
+	@echo ... Statistics.i
+	@echo ... Statistics.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

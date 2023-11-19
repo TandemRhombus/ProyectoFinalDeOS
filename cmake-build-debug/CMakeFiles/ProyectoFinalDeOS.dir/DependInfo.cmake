@@ -12,6 +12,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Config.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj.d"
   "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Process.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj.d"
   "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/RoundRobin.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.obj.d"
+  "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Simulation.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/Simulation.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/Simulation.cpp.obj.d"
+  "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/Statistics.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj.d"
   "C:/Users/PC LITLE OWL/CLionProjects/ProyectoFinalDeOS/main.cpp" "CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj" "gcc" "CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj.d"
   )
 

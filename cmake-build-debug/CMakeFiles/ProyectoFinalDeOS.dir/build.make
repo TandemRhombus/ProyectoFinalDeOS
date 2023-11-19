@@ -138,13 +138,43 @@ CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.s"
 	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\RoundRobin.cpp" -o CMakeFiles\ProyectoFinalDeOS.dir\RoundRobin.cpp.s
 
+CMakeFiles/ProyectoFinalDeOS.dir/Simulation.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/flags.make
+CMakeFiles/ProyectoFinalDeOS.dir/Simulation.cpp.obj: C:/Users/PC\ LITLE\ OWL/CLionProjects/ProyectoFinalDeOS/Simulation.cpp
+CMakeFiles/ProyectoFinalDeOS.dir/Simulation.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ProyectoFinalDeOS.dir/Simulation.cpp.obj"
+	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoFinalDeOS.dir/Simulation.cpp.obj -MF CMakeFiles\ProyectoFinalDeOS.dir\Simulation.cpp.obj.d -o CMakeFiles\ProyectoFinalDeOS.dir\Simulation.cpp.obj -c "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Simulation.cpp"
+
+CMakeFiles/ProyectoFinalDeOS.dir/Simulation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProyectoFinalDeOS.dir/Simulation.cpp.i"
+	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Simulation.cpp" > CMakeFiles\ProyectoFinalDeOS.dir\Simulation.cpp.i
+
+CMakeFiles/ProyectoFinalDeOS.dir/Simulation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProyectoFinalDeOS.dir/Simulation.cpp.s"
+	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Simulation.cpp" -o CMakeFiles\ProyectoFinalDeOS.dir\Simulation.cpp.s
+
+CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/flags.make
+CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj: C:/Users/PC\ LITLE\ OWL/CLionProjects/ProyectoFinalDeOS/Statistics.cpp
+CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj"
+	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj -MF CMakeFiles\ProyectoFinalDeOS.dir\Statistics.cpp.obj.d -o CMakeFiles\ProyectoFinalDeOS.dir\Statistics.cpp.obj -c "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Statistics.cpp"
+
+CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.i"
+	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Statistics.cpp" > CMakeFiles\ProyectoFinalDeOS.dir\Statistics.cpp.i
+
+CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.s"
+	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\Statistics.cpp" -o CMakeFiles\ProyectoFinalDeOS.dir\Statistics.cpp.s
+
 # Object files for target ProyectoFinalDeOS
 ProyectoFinalDeOS_OBJECTS = \
 "CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj" \
 "CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj" \
 "CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj" \
 "CMakeFiles/ProyectoFinalDeOS.dir/BuddySystem.cpp.obj" \
-"CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.obj"
+"CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.obj" \
+"CMakeFiles/ProyectoFinalDeOS.dir/Simulation.cpp.obj" \
+"CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj"
 
 # External object files for target ProyectoFinalDeOS
 ProyectoFinalDeOS_EXTERNAL_OBJECTS =
@@ -154,11 +184,13 @@ ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/Config.cpp.obj
 ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/Process.cpp.obj
 ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/BuddySystem.cpp.obj
 ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/RoundRobin.cpp.obj
+ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/Simulation.cpp.obj
+ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/Statistics.cpp.obj
 ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/build.make
 ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/linkLibs.rsp
 ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/objects1.rsp
 ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ProyectoFinalDeOS.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ProyectoFinalDeOS.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ProyectoFinalDeOS.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
