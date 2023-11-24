@@ -6,6 +6,8 @@
 #include <vector>
 #include <cmath>
 #include <iomanip>
+#include <windows.h>
+#include <conio.h>
 
 using namespace std;
 
@@ -25,12 +27,17 @@ struct Bloque {
 const int TAMANO_MEMORIA = 4096; // 4 MB
 const int MIN_SPLIT = 32; // 32 KB
 
-// Parámetros configurables
-int quantumProceso = 5;
+// ParÃ¡metros configurables
+int quantumProceso;
+int tamanoMaximoProceso; // Por ejemplo, 1024 KB
+int quantumMaximoSistema;
+
+/*int quantumProceso = 5;
 int tamanoMaximoProceso = 1024; // Por ejemplo, 1024 KB
 int quantumMaximoSistema = 10;
+*/
 
-// Parámetros de estadísticas
+// ParÃ¡metros de estadÃ­sticas
 int procesosTotales = 0;
 int procesosFinalizados = 0;
 int procesosNoFinalizados = 0;
@@ -102,6 +109,28 @@ private:
         }
     }
 
+    // Funcion que condensa la memoria y muestra como lo va haciendo en consola
+    void condensarMemoria(Bloque* nodo){
+        if(!nodo) return;
+        if(nodo->libre && nodo->tamano/2 < MIN_SPLIT){
+            cout<<"Condensando memoria..."<<endl;
+            cout<<"Memoria condensada"<<endl;
+            return;
+        }
+        if(nodo->izquierda && nodo->derecha){
+            if(nodo->izquierda->libre && nodo->derecha->libre){
+                cout<<"Condensando memoria..."<<endl;
+                cout<<"Memoria condensada"<<endl;
+                delete nodo->izquierda;
+                delete nodo->derecha;
+                nodo->izquierda = nodo->derecha = nullptr;
+                nodo->libre = true;
+                actualizarListaBloquesLibres();
+                condensarMemoria(raiz);
+            }
+        }
+    }
+
     void actualizarListaBloquesLibres() {
         bloquesLibres.clear();
         agregarBloquesLibres(raiz);
@@ -121,11 +150,11 @@ private:
 public:
     BuddySystem(int tamanoTotal, int splitMinimo) : tamanoMinimoSplit(splitMinimo) {
         raiz = new Bloque(tamanoTotal);
-        bloquesLibres.push_back(raiz); // El bloque raíz está inicialmente libre
+        bloquesLibres.push_back(raiz); // El bloque raÃ­z estÃ¡ inicialmente libre
     }
 
     ~BuddySystem() {
-        delete raiz; // Asegura la liberación adecuada de la memoria
+        delete raiz; // Asegura la liberaciÃ³n adecuada de la memoria
     }
 
     Bloque* dividirBloque(Bloque* nodo, int tamano) {
@@ -133,7 +162,7 @@ public:
             return nullptr;
         }
 
-        // Detener si el bloque actual es suficientemente pequeño
+        // Detener si el bloque actual es suficientemente pequeÃ±o
         if (nodo->tamano / 2 < tamano || nodo->tamano / 2 < MIN_SPLIT) {
             return nodo;
         }
@@ -153,7 +182,7 @@ public:
     }
 
     Bloque* asignar(int tamano) {
-        // Dividir primero el bloque más grande posible
+        // Dividir primero el bloque mÃ¡s grande posible
         dividirBloque(raiz, tamano);
 
         // Luego, intentar asignar
@@ -177,6 +206,10 @@ public:
 
     void mostrarEstadoCompleto() {
         mostrarEstado(raiz);
+    }
+
+    void condensarMemoriaCompleta(){
+        condensarMemoria(raiz);
     }
 
     // Getters y setters
@@ -203,9 +236,9 @@ public:
     void ejecutar() {
         if (!cola.empty()) {
             Proceso& procesoActual = cola.front();
-            cout << "Proceso en ejecución: ID=" << procesoActual.getId() << endl;
+            cout << "Proceso en ejecucion: ID=" << procesoActual.getId() << endl;
 
-            // Simular ejecución...
+            // Simular ejecuciÃ³n...
             procesoActual.setQuantumRestante(procesoActual.getQuantumRestante() - quantum);
 
             if (procesoActual.getQuantumRestante() <= 0) {
@@ -220,7 +253,7 @@ public:
         }
     }
 
-    // Método para eliminar procesos finalizados (si es necesario)
+    // MÃ©todo para eliminar procesos finalizados (si es necesario)
     void eliminarProcesosFinalizados() {
         std::queue<Proceso> colaTemp;
         while (!cola.empty()) {
@@ -236,7 +269,7 @@ public:
     }
 };
 
-// Clase Simulación
+// Clase SimulaciÃ³n
 class Simulacion {
 private:
     BuddySystem buddySystem;
@@ -277,10 +310,16 @@ public:
 
                     roundRobin.agregarProceso(proceso);
                     roundRobin.ejecutar();
+                    cout << "Ejecutando Round Robin... (pendiente de impresion)" << endl;
 
-                    buddySystem.liberarBloque(bloqueAsignado);
                     memoriaDisponible += proceso.getTamano();
                     cout << "Memoria liberada del Proceso " << proceso.getId() << endl;
+                    // Condensar memoria
+                    buddySystem.condensarMemoriaCompleta();
+                    cout << "Pendiente la impreson de la condensacion de memoria (solo falta imprimir)" << endl;
+                    // Eliminar procesos finalizados
+                    roundRobin.eliminarProcesosFinalizados();
+                    cout << endl << endl;
                 } else {
                     cout << "No se pudo asignar memoria al Proceso " << proceso.getId() << std::endl;
                     procesosRechazados++;
@@ -290,23 +329,136 @@ public:
                 procesosRechazados++;
             }
 
-            // Control de finalización de la simulación (puedes ajustar esto según tus necesidades)
-            if (procesosFinalizados >= procesosTotales - procesosRechazados) {
-                detenerSimulacion();
+            // Control de finalizacion de la simulacion precionando una tecla
+            if (kbhit()) {
+                char tecla = getch();
+                if (tecla == 'q') {
+                    detenerSimulacion();
+                    //Mostrar Estadiscicas
+                    cout << endl << endl << "ESTADISTICAS" << endl;
+                    cout << "Procesos Totales: " << procesosTotales << endl;
+                    cout << "Procesos Finalizados: " << procesosFinalizados << endl;
+                }
             }
         }
     }
 
-    // Método para terminar la simulación
+    // MÃ©todo para terminar la simulaciÃ³n
     void detenerSimulacion() {
         ejecutarSimulacion = false;
     }
 };
 
-// Función principal
+void gotoxy(int x,int y){
+    HANDLE hcon;
+    hcon = GetStdHandle(STD_OUTPUT_HANDLE);
+    COORD dwPos;
+    dwPos.X = x;
+    dwPos.Y= y;
+    SetConsoleCursorPosition(hcon,dwPos);
+}
+
+void portada(){
+    HANDLE hConsole=GetStdHandle(STD_OUTPUT_HANDLE);
+    //TamaÃ±o del marco
+    const int ancho=100;
+    const int alto=25;
+
+    //Texto de la pantalla
+    string carrera="<< I N G E N I E R I A  E N  S I S T E M A S  C O M P U T A C I O N A L E S >>";
+    string materia="<< S I S T E M A S  O P E R A T I V O S >>";
+    string proyecto="<< SYSTEM BUDDY - ROUND ROBIN >>";
+    string integrantes="I N T E G R A N T E S";
+    string nom1="Ivan Favela Ruvalcaba";
+    string nom2="Sergio Emiliano Hernandez Villalpando";
+    string nom3="Cinthia Edith Garcia de Luna";
+    string nom4="Dario Miguel Moreno Gonzalez";
+    string intro="*ENTER PARA COMENZAR*";
+
+    //Obtener el ancho y alto de la consola
+    CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
+    GetConsoleScreenBufferInfo(hConsole, &consoleInfo);
+    int consoleWidth=consoleInfo.srWindow.Right-consoleInfo.srWindow.Left+1;
+    int consoleHeight=consoleInfo.srWindow.Bottom-consoleInfo.srWindow.Top+1;
+
+    //Calcular la posiciÃ³n de inicio para centrar la pantalla
+    int startX=(consoleWidth-ancho)/2;
+    int startY=(consoleHeight-alto)/6;
+
+    //Imprimir marco centrado
+    for(int i=0; i<startY; i++){
+        cout<<endl;
+    }
+
+    for(int i=0; i<alto; i++){
+        for(int j=0; j<startX; j++){
+            cout<<" ";
+        }
+        for(int j=0; j<ancho; j++){
+            if(i==0 || i==alto-1 || j==0 || j==ancho-1){
+                // Cambiar el color del marco en cada iteraciÃ³n
+                SetConsoleTextAttribute(hConsole, 15);
+                cout<<char(178);
+            } else {
+                cout<<" ";
+            }
+        }
+        cout<<endl;
+    }
+
+    SetConsoleTextAttribute(hConsole,10); //color
+    gotoxy(startX+11, startY+3); //posiciÃ³n
+    cout<<carrera; //nombre
+    SetConsoleTextAttribute(hConsole,12);
+    gotoxy(startX+29, startY+6);
+    cout<<materia;
+    SetConsoleTextAttribute(hConsole,11);
+    gotoxy(startX+34, startY +9);
+    cout<<proyecto;
+    SetConsoleTextAttribute(hConsole,6);
+    gotoxy(startX+39, startY +12);
+    cout<<integrantes;
+    gotoxy(startX+39, startY+14);
+    cout<<nom1;
+    gotoxy(startX+31, startY +15);
+    cout<<nom2;
+    gotoxy(startX+36, startY +16);
+    cout<<nom3;
+    gotoxy(startX+36, startY +17);
+    cout<<nom4;
+    SetConsoleTextAttribute(hConsole,112);
+    gotoxy(startX+39, startY +20);
+    cout<<intro;
+    SetConsoleTextAttribute(hConsole,0);
+    cout<<endl;
+    cout<<endl;
+    gotoxy(0,25);
+    getch();
+    system("cls");
+    SetConsoleTextAttribute(hConsole, 15);
+}
+
+void config(){
+    cout<<"MODULO DE CONFIGURACION DE PARAMETROS";
+    cout<<endl<<endl<<"Cuanto de procesamiento asignado a cada proceso: ";
+    cin>>quantumProceso;
+    cout<<endl<<"Tamano maximo de memoria de proceso: ";
+    cin>>tamanoMaximoProceso;
+    cout<<endl<<"Tamano maximo del cuanto de procesamiento por proceso (cuanto del sistema): ";
+    cin>>quantumMaximoSistema;
+    cout<<endl<<"Configuracion completada, ENTER para continuar";
+    getch();
+    fflush(stdin);
+    system("cls");
+}
+
+// FunciÃ³n principal
 int main() {
     srand(time(NULL));
+    portada();
+    config();
     Simulacion simulacion(TAMANO_MEMORIA, MIN_SPLIT, quantumMaximoSistema, quantumProceso, tamanoMaximoProceso);
     simulacion.ejecutar();
+    system("pause");
     return 0;
 }

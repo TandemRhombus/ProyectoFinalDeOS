@@ -1,3 +1,3 @@
-"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\ProyectoFinalDeOS.dir/objects.a
-"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\ar.exe" qc CMakeFiles\ProyectoFinalDeOS.dir/objects.a @CMakeFiles\ProyectoFinalDeOS.dir\objects1.rsp
-"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" -g -Wl,--whole-archive CMakeFiles\ProyectoFinalDeOS.dir/objects.a -Wl,--no-whole-archive -o ProyectoFinalDeOS.exe -Wl,--out-implib,libProyectoFinalDeOS.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ProyectoFinalDeOS.dir\linkLibs.rsp
+"C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\ProyectoFinalDeOS.dir/objects.a
+C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\ar.exe qc CMakeFiles\ProyectoFinalDeOS.dir/objects.a @CMakeFiles\ProyectoFinalDeOS.dir\objects1.rsp
+C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\ProyectoFinalDeOS.dir/objects.a -Wl,--no-whole-archive -o ProyectoFinalDeOS.exe -Wl,--out-implib,libProyectoFinalDeOS.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ProyectoFinalDeOS.dir\linkLibs.rsp
