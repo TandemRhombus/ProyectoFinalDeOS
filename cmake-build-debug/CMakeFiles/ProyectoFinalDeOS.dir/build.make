@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\emili\Codigos de logica de programacion (C)\ProyectoFinalDeOS"
+CMAKE_SOURCE_DIR = "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\emili\Codigos de logica de programacion (C)\ProyectoFinalDeOS\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ProyectoFinalDeOS.dir/depend.make
@@ -69,18 +69,18 @@ include CMakeFiles/ProyectoFinalDeOS.dir/progress.make
 include CMakeFiles/ProyectoFinalDeOS.dir/flags.make
 
 CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/flags.make
-CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj: C:/Users/emili/Codigos\ de\ logica\ de\ programacion\ (C)/ProyectoFinalDeOS/main.cpp
+CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj: C:/Users/PC\ LITLE\ OWL/CLionProjects/ProyectoFinalDeOS/main.cpp
 CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj: CMakeFiles/ProyectoFinalDeOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\emili\Codigos de logica de programacion (C)\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj -MF CMakeFiles\ProyectoFinalDeOS.dir\main.cpp.obj.d -o CMakeFiles\ProyectoFinalDeOS.dir\main.cpp.obj -c "C:\Users\emili\Codigos de logica de programacion (C)\ProyectoFinalDeOS\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj"
+	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.obj -MF CMakeFiles\ProyectoFinalDeOS.dir\main.cpp.obj.d -o CMakeFiles\ProyectoFinalDeOS.dir\main.cpp.obj -c "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\main.cpp"
 
 CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\emili\Codigos de logica de programacion (C)\ProyectoFinalDeOS\main.cpp" > CMakeFiles\ProyectoFinalDeOS.dir\main.cpp.i
+	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\main.cpp" > CMakeFiles\ProyectoFinalDeOS.dir\main.cpp.i
 
 CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProyectoFinalDeOS.dir/main.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\emili\Codigos de logica de programacion (C)\ProyectoFinalDeOS\main.cpp" -o CMakeFiles\ProyectoFinalDeOS.dir\main.cpp.s
+	"C:\Users\PC LITLE OWL\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\main.cpp" -o CMakeFiles\ProyectoFinalDeOS.dir\main.cpp.s
 
 # Object files for target ProyectoFinalDeOS
 ProyectoFinalDeOS_OBJECTS = \
@@ -94,7 +94,7 @@ ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/build.make
 ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/linkLibs.rsp
 ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/objects1.rsp
 ProyectoFinalDeOS.exe: CMakeFiles/ProyectoFinalDeOS.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\emili\Codigos de logica de programacion (C)\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ProyectoFinalDeOS.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ProyectoFinalDeOS.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ProyectoFinalDeOS.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -106,6 +106,6 @@ CMakeFiles/ProyectoFinalDeOS.dir/clean:
 .PHONY : CMakeFiles/ProyectoFinalDeOS.dir/clean
 
 CMakeFiles/ProyectoFinalDeOS.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\emili\Codigos de logica de programacion (C)\ProyectoFinalDeOS" "C:\Users\emili\Codigos de logica de programacion (C)\ProyectoFinalDeOS" "C:\Users\emili\Codigos de logica de programacion (C)\ProyectoFinalDeOS\cmake-build-debug" "C:\Users\emili\Codigos de logica de programacion (C)\ProyectoFinalDeOS\cmake-build-debug" "C:\Users\emili\Codigos de logica de programacion (C)\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles\ProyectoFinalDeOS.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS" "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS" "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug" "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug" "C:\Users\PC LITLE OWL\CLionProjects\ProyectoFinalDeOS\cmake-build-debug\CMakeFiles\ProyectoFinalDeOS.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/ProyectoFinalDeOS.dir/depend
 
