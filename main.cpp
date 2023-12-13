@@ -8,15 +8,16 @@
 #include <iomanip>
 #include <windows.h>
 #include <conio.h>
+#include <numeric>  // Para std::accumulate
 
 using namespace std;
 
 struct Bloque {
     int tamano;
     bool libre;
-    Bloque *izquierda, *derecha;
+    Bloque *izquierda, *derecha, *padre;
 
-    Bloque(int t) : tamano(t), libre(true), izquierda(nullptr), derecha(nullptr) {}
+    Bloque(int t, Bloque* p = nullptr) : tamano(t), libre(true), izquierda(nullptr), derecha(nullptr), padre(p) {}
 
     ~Bloque() {
         delete izquierda;
@@ -25,7 +26,7 @@ struct Bloque {
 };
 
 const int MIN_SPLIT = 32; // 32 KB
-
+vector<int> tiemposDeProcesos;
 // Parámetros configurables
 int TAMANO_MEMORIA;
 int quantumProceso;
@@ -55,8 +56,29 @@ private:
     int quantum;
     int quantumRestante;
     static int contadorID;
+    Bloque* bloqueAsignado;
+    int tiempoInicio;       // Tiempo cuando el proceso es creado
+    int tiempoFinalizacion; // Tiempo cuando el proceso finaliza
 public:
-    Proceso(int tam, int q) : id(contadorID++), tamano(tam), quantum(q), quantumRestante(q) {}
+
+    // Constructor modificado y métodos para manejar bloqueAsignado
+    Proceso(int tam, int q) : id(contadorID++), tamano(tam), quantum(q), quantumRestante(q), bloqueAsignado(nullptr), tiempoInicio(clock()) {}
+
+    void finalizarProceso() {
+        tiempoFinalizacion = clock();
+    }
+
+    int getTiempoTotal() const {
+        return tiempoFinalizacion - tiempoInicio;
+    }
+
+    void setBloqueAsignado(Bloque* bloque) {
+        bloqueAsignado = bloque;
+    }
+
+    Bloque* getBloqueAsignado() const {
+        return bloqueAsignado;
+    }
 
     int getId() const { return id; }
     int getTamano() const { return tamano; }
@@ -72,7 +94,7 @@ int Proceso::contadorID = 1;
 // Clase Buddy System
 class BuddySystem {
 private:
-    Bloque* raiz;
+    Bloque* raiz = nullptr;
     const int tamanoMinimoSplit;
     vector<Bloque*> bloquesLibres; // Lista de bloques libres
 
@@ -81,58 +103,60 @@ private:
             return nullptr;
         }
 
-        if (nodo->libre && nodo->tamano >= tamano && (nodo->tamano / 2 < tamano || nodo->tamano / 2 < MIN_SPLIT)) {
+        // Si el bloque ya está dividido, intenta asignar en los hijos
+        if (nodo->izquierda && nodo->derecha) {
+            Bloque* bloqueAsignado = asignarBloque(nodo->izquierda, tamano);
+            if (bloqueAsignado) {
+                return bloqueAsignado;
+            }
+            return asignarBloque(nodo->derecha, tamano);
+        }
+
+        // Si el bloque está libre y es del tamaño adecuado, asignarlo
+        if (nodo->libre && (nodo->tamano == tamano || nodo->tamano / 2 < tamano)) {
             nodo->libre = false;
             return nodo;
         }
 
-        if (!nodo->izquierda && nodo->tamano / 2 >= tamano) {
-            nodo->izquierda = new Bloque(nodo->tamano / 2);
-            nodo->derecha = new Bloque(nodo->tamano / 2);
+        // Si el bloque es demasiado grande y está libre, dividirlo
+        if (nodo->libre && nodo->tamano / 2 >= tamano && nodo->tamano / 2 >= MIN_SPLIT) {
+            nodo->izquierda = new Bloque(nodo->tamano / 2, nodo); // Establecer el padre del nuevo bloque
+            nodo->derecha = new Bloque(nodo->tamano / 2, nodo);   // Establecer el padre del nuevo bloque
+            return asignarBloque(nodo->izquierda, tamano);
         }
 
-        Bloque* bloqueAsignado = asignarBloque(nodo->izquierda, tamano);
-        if (bloqueAsignado) {
-            return bloqueAsignado;
-        }
+        return nullptr; // No se pudo asignar el bloque
+    }
 
-        return asignarBloque(nodo->derecha, tamano);
+    bool sonHermanos(Bloque* nodo1, Bloque* nodo2) {
+        return nodo1 && nodo2 && nodo1->padre == nodo2->padre;
     }
 
     void fusionarBloques(Bloque* nodo) {
         if (!nodo || !nodo->izquierda || !nodo->derecha) return;
 
-        if (nodo->izquierda->libre && nodo->derecha->libre) {
+        // Condensa los hijos primero
+        fusionarBloques(nodo->izquierda);
+        fusionarBloques(nodo->derecha);
+
+        // Verificar si ambos hijos están libres y no tienen hijos
+        if (nodo->izquierda->libre && nodo->derecha->libre &&
+            !nodo->izquierda->izquierda && !nodo->izquierda->derecha &&
+            !nodo->derecha->izquierda && !nodo->derecha->derecha) {
+
+            // Eliminar y fusionar los hijos
             delete nodo->izquierda;
             delete nodo->derecha;
-            nodo->izquierda = nodo->derecha = nullptr;
+            nodo->izquierda = nullptr;
+            nodo->derecha = nullptr;
             nodo->libre = true;
-            // Actualiza la lista de bloques libres
-            actualizarListaBloquesLibres();
-            fusionarBloques(raiz); // Intentar fusionar en niveles superiores
         }
     }
 
+
     // Funcion que condensa la memoria y muestra como lo va haciendo en consola
-    void condensarMemoria(Bloque* nodo){
-        if(!nodo) return;
-        if(nodo->libre && nodo->tamano/2 < MIN_SPLIT){
-            cout<<"Condensando memoria..."<<endl;
-            cout<<"Memoria condensada"<<endl;
-            return;
-        }
-        if(nodo->izquierda && nodo->derecha){
-            if(nodo->izquierda->libre && nodo->derecha->libre){
-                cout<<"Condensando memoria..."<<endl;
-                cout<<"Memoria condensada"<<endl;
-                delete nodo->izquierda;
-                delete nodo->derecha;
-                nodo->izquierda = nodo->derecha = nullptr;
-                nodo->libre = true;
-                actualizarListaBloquesLibres();
-                condensarMemoria(raiz);
-            }
-        }
+    void condensar(Bloque* nodo) {
+        fusionarBloques(nodo);
     }
 
     void actualizarListaBloquesLibres() {
@@ -155,6 +179,20 @@ public:
     BuddySystem(int tamanoTotal, int splitMinimo) : tamanoMinimoSplit(splitMinimo) {
         raiz = new Bloque(tamanoTotal);
         bloquesLibres.push_back(raiz); // El bloque raí­z esta inicialmente libre
+    }
+
+    bool puedeAsignar(Bloque* nodo, int tamano) {
+        if (!nodo) {
+            return false;
+        }
+
+        // Si el bloque actual está libre y es del tamaño adecuado, devuelve true
+        if (nodo->libre && nodo->tamano >= tamano) {
+            return true;
+        }
+
+        // Si no, verifica en los bloques hijos
+        return puedeAsignar(nodo->izquierda, tamano) || puedeAsignar(nodo->derecha, tamano);
     }
 
     ~BuddySystem() {
@@ -186,17 +224,13 @@ public:
     }
 
     Bloque* asignar(int tamano) {
-        // Dividir primero el bloque más grande posible
-        dividirBloque(raiz, tamano);
-
-        // Luego, intentar asignar
         return asignarBloque(raiz, tamano);
     }
 
     void liberarBloque(Bloque* bloque) {
         if (!bloque) return;
         bloque->libre = true;
-        fusionarBloques(bloque);
+        condensar(raiz); // Comienza la condensación desde la raíz
     }
 
     void mostrarEstado(Bloque* nodo) {
@@ -217,11 +251,6 @@ public:
         mostrarEstado(raiz);
     }
 
-
-    void condensarMemoriaCompleta(){
-        condensarMemoria(raiz);
-    }
-
     // Getters y setters
     Bloque* getRaiz() const { return raiz; }
     int getTamanoMinimoSplit() const { return tamanoMinimoSplit; }
@@ -233,42 +262,49 @@ public:
 // Clase Round Robin
 class RoundRobin {
 private:
-    std::queue<Proceso> cola;
+    queue<Proceso> cola;
     int quantum;
 
 public:
+    // Constructor modificado
     RoundRobin(int q) : quantum(q) {}
+
+    // Metodo para imprimir la cola de procesos con el formato [ID, tamano, quantum]
+    void imprimirCola(){
+        queue<Proceso> colaTemp;
+        cout<<endl<<"Cola de procesos: ";
+        while(!cola.empty()){
+            Proceso proceso = cola.front();
+            cola.pop();
+            cout<<"["<<proceso.getId()<<", "<<proceso.getTamano()<<", "<<proceso.getQuantumRestante()<<"] ";
+            colaTemp.push(proceso);
+        }
+        swap(cola, colaTemp);
+    }
+
+    bool colaVacia() const {
+        return cola.empty();
+    }
 
     void agregarProceso(Proceso proceso) {
         cola.push(proceso);
     }
 
-    void ejecutar() {
-        while (!cola.empty()) {
-            Proceso& procesoActual = cola.front();
-            cout << "Proceso en ejecucion: ID=" << procesoActual.getId();
-            cout<< endl <<"Quantum restante=" << procesoActual.getQuantumRestante() << endl;
-
-            // Simular ejecución...
-            procesoActual.setQuantumRestante(procesoActual.getQuantumRestante() - quantum);
-
-            if (procesoActual.getQuantumRestante() <= 0) {
-                // Proceso finalizado
-                procesosFinalizados++;
-                cout << "Quantum agotado para proceso ID=" << procesoActual.getId();
-                cout << endl << "Proceso finalizado" << endl;
-                cola.pop();
-            } else {
-                // Mover al final de la cola
-                cola.push(procesoActual);
-                cola.pop();
-            }
+    void agregarProcesoAlFrente(Proceso proceso) {
+        //nuevos procesos se agregan al frente de la cola
+        queue<Proceso> colaTemp;
+        colaTemp.push(proceso);
+        while(!cola.empty()){
+            Proceso proceso = cola.front();
+            cola.pop();
+            colaTemp.push(proceso);
         }
+        swap(cola, colaTemp);
     }
 
     // Método para eliminar procesos finalizados (si es necesario)
     void eliminarProcesosFinalizados() {
-        std::queue<Proceso> colaTemp;
+        queue<Proceso> colaTemp;
         while (!cola.empty()) {
             Proceso proceso = cola.front();
             cola.pop();
@@ -278,7 +314,39 @@ public:
                 procesosFinalizados++;
             }
         }
-        std::swap(cola, colaTemp);
+        swap(cola, colaTemp);
+    }
+
+    void procesarQuantum(BuddySystem& buddySystem, int& memoriaDisponible) {
+        if (cola.empty()) return;
+
+        Proceso& procesoActual = cola.front();
+        cout << endl << "Proceso en ejecucion: [" << procesoActual.getId() << ", " << procesoActual.getTamano() << ", " << procesoActual.getQuantumRestante() << "]" << endl;
+
+        // Restar el quantum del sistema al quantum restante del proceso
+        procesoActual.setQuantumRestante(procesoActual.getQuantumRestante() - quantum);
+        if(procesoActual.getQuantumRestante() > 0){
+            cout << "Quantum restante del proceso: " << procesoActual.getQuantumRestante() << endl;
+        } else {
+            cout << "Quantum restante del proceso: 0" << endl;
+            cout << "Descarga de proceso..." << endl;
+        }
+
+        // Verificar si el proceso ha terminado
+        if (procesoActual.getQuantumRestante() <= 0) {
+            procesoActual.finalizarProceso();
+            //anadir el tiempo de ejecucion del proceso a la lista de tiempos
+            tiemposDeProcesos.push_back(procesoActual.getTiempoTotal());
+            cout << endl << "Proceso finalizado: ID=" << procesoActual.getId() << endl;
+            memoriaDisponible += procesoActual.getTamano(); // Liberar memoria
+            buddySystem.liberarBloque(procesoActual.getBloqueAsignado());
+            cola.pop(); // Quitar el proceso de la cola
+            procesosFinalizados++;
+        } else {
+            // Si el proceso no ha terminado, moverlo al final de la cola
+            cola.push(procesoActual);
+            cola.pop();
+        }
     }
 };
 
@@ -292,13 +360,15 @@ private:
     int quantumProceso;
     int tamanoMaximoProceso;
     bool ejecutarSimulacion;
+    queue<Proceso> colaEspera; // Cola de espera para procesos que no se pudieron asignar
+    bool esperandoEspacio; // Indica si hay un proceso en espera por falta de espacio
 
 public:
     Simulacion(int memoria, int split, int qSistema, int qProceso, int tamMaxProceso)
             : buddySystem(memoria, split), roundRobin(qSistema),
               memoriaDisponible(memoria), quantumSistema(qSistema),
               quantumProceso(qProceso), tamanoMaximoProceso(tamMaxProceso),
-              ejecutarSimulacion(true) {}
+              ejecutarSimulacion(true), esperandoEspacio(false) {}
 
     Proceso generarProcesoAleatorio() {
         int tamano1 = rand() % tamanoMaximoProceso + 1;
@@ -309,76 +379,102 @@ public:
     }
 
     void ejecutar() {
-        char velocidadtecla;
+        char velocidadTecla;
         int velocidad = 1;
+
         while (ejecutarSimulacion) {
-            // Control de finalizacion de la simulacion precionando una tecla
+            cout << endl << endl;
+            // Control para finalizar la simulación
             if (kbhit()) {
                 char tecla = getch();
                 if (tecla == 'q') {
                     detenerSimulacion();
-                    //Mostrar Estadiscicas
-                    cout << endl << endl << "ESTADISTICAS" << endl;
-                    cout << "Procesos Totales: " << procesosTotales << endl;
-                    cout << "Procesos Finalizados: " << procesosFinalizados << endl;
+                    cout << "Simulación detenida. Mostrando estadísticas..." << endl;
+                    // Mostrar estadísticas aquí
+                    break;
                 }
             }
 
-            Proceso proceso = generarProcesoAleatorio();
-            cout << setw(15) << left << "Proceso generado: [" << proceso.getId() << ", " << proceso.getTamano() << ", " << proceso.getQuantum() << "]" << endl;
+            // Ejecutar el proceso en el frente de la cola con Round Robin
+            roundRobin.procesarQuantum(buddySystem, memoriaDisponible);
 
-            // Control de velocidad de la simulacion
+            // Verificar si hay suficiente memoria libre para el nuevo proceso
+            if (memoriaDisponible >= tamanoMaximoProceso) {
+                // Intentar asignar un nuevo proceso
+                Proceso proceso = generarProcesoAleatorio();
+                cout << endl << "Proceso generado: [" << proceso.getId() << ", " << proceso.getTamano() << ", " << proceso.getQuantum() << "]" << endl;
+                //verificar si hay algun bloque donde se pueda asignar el proceso
+                if (buddySystem.puedeAsignar(buddySystem.getRaiz(), proceso.getTamano())) {
+                    Bloque* bloqueAsignado = buddySystem.asignar(proceso.getTamano());
+                    if (bloqueAsignado) {
+                        cout <<"Proceso asignado en bloque de memoria: "<< bloqueAsignado->tamano<<" KB"<<endl;
+                        proceso.setBloqueAsignado(bloqueAsignado);
+                        memoriaDisponible -= proceso.getTamano();
+                        roundRobin.agregarProcesoAlFrente(proceso);
+                    }
+                } else {
+                    // Si no hay suficiente memoria libre, verificar si algún proceso en espera puede liberar espacio
+                    while (!colaEspera.empty()) {
+                        Proceso procesoEspera = colaEspera.front();
+                        if (memoriaDisponible >= procesoEspera.getTamano()) {
+                            Bloque* bloqueAsignado = buddySystem.asignar(procesoEspera.getTamano());
+                            if (bloqueAsignado) {
+                                colaEspera.pop();
+                                procesoEspera.setBloqueAsignado(bloqueAsignado);
+                                memoriaDisponible -= procesoEspera.getTamano();
+                                roundRobin.agregarProcesoAlFrente(procesoEspera);
+                            } else {
+                                break;
+                            }
+                        } else {
+                            break;
+                        }
+                    }
+                }
+            } else {
+                // Si no hay suficiente memoria libre, verificar si algún proceso en espera puede liberar espacio
+                while (!colaEspera.empty()) {
+                    Proceso procesoEspera = colaEspera.front();
+                    if (memoriaDisponible >= procesoEspera.getTamano()) {
+                        Bloque* bloqueAsignado = buddySystem.asignar(procesoEspera.getTamano());
+                        if (bloqueAsignado) {
+                            colaEspera.pop();
+                            procesoEspera.setBloqueAsignado(bloqueAsignado);
+                            memoriaDisponible -= procesoEspera.getTamano();
+                            roundRobin.agregarProceso(procesoEspera);
+                        } else {
+                            break;
+                        }
+                    } else {
+                        break;
+                    }
+                }
+            } // Fin de la verificación de memoria libre
+
+            // Mostrar el estado de la memoria
+            buddySystem.mostrarEstadoCompleto();
+            // Mostrar la cola de procesos
+            roundRobin.imprimirCola();
+
+            // Control de velocidad de la simulación
             if (kbhit()) {
-                velocidadtecla = getch();
-                if (velocidadtecla == '1') {
+                velocidadTecla = getch();
+                if (velocidadTecla == '1') {
                     velocidad = 1;
-                } else if (velocidadtecla == '2') {
+                } else if (velocidadTecla == '2') {
                     velocidad = 2;
                 }
             }
+
             if (velocidad == 1) {
-                Sleep(2000);
+                Sleep(2000); // Pausa de 2 segundos para visualizar la simulación
             } else if (velocidad == 2) {
-                Sleep(1);
+                Sleep(1); // Pausa mínima para una ejecución más rápida
             }
-
-            if (memoriaDisponible >= proceso.getTamano()) {
-                // Asignar memoria al proceso
-                Bloque *bloqueAsignado = buddySystem.asignar(proceso.getTamano());
-                buddySystem.mostrarEstadoCompleto();
-                if (bloqueAsignado != nullptr) {
-                    memoriaDisponible -= proceso.getTamano();
-                    cout << endl << endl <<"Memoria asignada al Proceso " << proceso.getId() << " en un bloque de "
-                         << bloqueAsignado->tamano << " KB" << endl;
-
-                    roundRobin.agregarProceso(proceso);
-                    roundRobin.ejecutar();
-
-                    memoriaDisponible += proceso.getTamano();
-                    cout << "Memoria liberada del Proceso " << proceso.getId() << endl;
-                    // Condensar memoria
-                    buddySystem.condensarMemoriaCompleta();
-                    // Eliminar procesos finalizados
-                    roundRobin.eliminarProcesosFinalizados();
-                    cout << endl << endl;
-                } else {
-                    cout << "No se pudo asignar memoria al Proceso " << proceso.getId() << std::endl;
-                    procesosRechazados++;
-                }
-            } else {
-                cout << "Memoria insuficiente para Proceso " << proceso.getId() << endl;
-                procesosRechazados++;
-            }
-            cout << endl << endl;
-            if(velocidad==1){
-                cout << "Velocidad de simulacion: NORMAL" << endl;
-            }else if(velocidad==2){
-                cout << "Velocidad de simulacion: RAPIDA" << endl;
-            }
-            cout << "Presiona 'q' para terminar la simulacion" << endl;
-            cout << endl << endl;
         }
     }
+
+
 
     // Método para terminar la simulación
     void detenerSimulacion() {
@@ -510,6 +606,16 @@ int main() {
     config();
     Simulacion simulacion(TAMANO_MEMORIA, MIN_SPLIT, quantumMaximoSistema, quantumProceso, tamanoMaximoProceso);
     simulacion.ejecutar();
+
+    // Mostrar estadísticas
+    cout << endl << endl << "Estadisticas:" << endl;
+    cout << "Procesos totales: " << procesosTotales << endl;
+    cout << "Procesos finalizados: " << procesosFinalizados << endl;
+    cout << "Procesos no finalizados: " << procesosNoFinalizados << endl;
+    cout << "Procesos rechazados: " << procesosRechazados << endl;
+    int sumaTiempos = accumulate(tiemposDeProcesos.begin(), tiemposDeProcesos.end(), 0);
+    double tiempoMedio = static_cast<double>(sumaTiempos) / tiemposDeProcesos.size();
+    cout << "Tiempo medio de atencion: " << tiempoMedio << " ms." << endl;
     system("pause");
     return 0;
 }
